@@ -114,19 +114,21 @@ table th {
         <table>
 		<tr>
 			<th>Titulo</th>
-			<th>Autor</th>
-			<th>Unidades vendidas</th>
+			<th>Cliente</th>
+			<th>Cantidad</th>
+			<th>Pago</th>
 		</tr>
 		<?php
-			$sql = "SELECT * FROM libros order by ventas desc";
+			$sql = "SELECT * FROM clientecompra LEFT JOIN cliente ON clientecompra.cliente = cliente.CorreoC LEFT JOIN libros ON clientecompra.libro = libros.idLibro LEFT JOIN compras ON clientecompra.compra = compras.IdCompra";
 			$resultado = mysqli_query($enlace,$sql);
 
 			while ($mostrar=mysqli_fetch_array($resultado)) {
 		?>
 		<tr>
 			<td><?php echo $mostrar['Titulo']?></td>
-			<td><?php echo $mostrar['Autor']?></td>
-			<td><?php echo $mostrar['ventas']?> piezas </td>
+			<td><?php echo $mostrar['cliente']?></td>
+			<td><?php echo $mostrar['UnidadCompra']?> piezas </td>
+			<td>$<?php echo $mostrar['TotalCompra']?></td>
 		</tr>
 		<?php
 			}

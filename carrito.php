@@ -133,7 +133,7 @@ return false;">Tecnologia</a></li>
                 ?>
                 
                   <tr>
-                  <form action="eliminarcarro.php" method="post" id="elibro<?php echo $row['librocarro'];?>"><input type="number" value="<?php echo $row['librocarro'];?>" name="libroe"></form>
+                  
                     <td class="product-thumbnail">
                       <img src="<?php echo $row['Portada'];?>" alt="Image" class="img-fluid">
                     </td>
@@ -144,7 +144,7 @@ return false;">Tecnologia</a></li>
                     <td><?php echo $row['unidadescarro'];?></td>
                     <td>$<?php echo $tp;?></td>
                     
-                    <td><a href="#" onclick="javascript:document.getElementById('elibro').submit(); return false;" class="btn btn-primary btn-sm">X</a></td>
+                    <td><a href="#" onclick="javascript:document.getElementById('elibro<?php echo $row['librocarro'];?>').submit(); return false;" class="btn btn-primary btn-sm">X</a></td>
                   </tr>
                   <?php
                  $tt = $tt + $tp;
@@ -152,7 +152,6 @@ return false;">Tecnologia</a></li>
                 </tbody>
               </table>
             </div>
-          </form>
         </div>
 
         <div class="row">
