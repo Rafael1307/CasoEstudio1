@@ -6,4 +6,4 @@
     $consulta2 = "DELETE FROM carrito WHERE clientecarro = '$clienteA' AND librocarro = $libro";
     mysqli_query($enlace, $consulta2);
 
-    header('Location: carrito.php');
+ 

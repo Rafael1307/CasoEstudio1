@@ -51,7 +51,7 @@ return false;"><span class="icon icon-search2"></span></a>
             <div class="col-6 col-md-4 order-3 order-md-3 text-right">
               <div class="site-top-icons">
                 <ul>
-                  <li><a href="#"><span class="icon icon-person"></span></a></li>
+                  <li><a href="irperfil.php"><span class="icon icon-person"></span></a></li>
                   
                   <li>
                     <a href="ircarrito.php" class="site-cart">
@@ -133,7 +133,7 @@ return false;">Tecnologia</a></li>
                 ?>
                 
                   <tr>
-                  <form action="eliminarcarro.php" method="POST" id="elibro"><input type="hidden" value="<?php echo $row['librocarro'];?>" name="libroe"></form>
+                  <form action="eliminarcarro.php" method="post" id="elibro<?php echo $row['librocarro'];?>"><input type="number" value="<?php echo $row['librocarro'];?>" name="libroe"></form>
                     <td class="product-thumbnail">
                       <img src="<?php echo $row['Portada'];?>" alt="Image" class="img-fluid">
                     </td>
